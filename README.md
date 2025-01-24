@@ -7,24 +7,24 @@ This is an Angular-based user management system application that allows adding, 
 # Prerequisites
 Before running the project, ensure that you have the following installed on your system:
 
-Node.js (Version 16)
-Angular CLI (Version 14 )
+`Node.js (Version 16)`
+`Angular CLI (Version 14 )`
 
 # Installation and Running Locally
 1. Clone the Repository
 Open your terminal or command prompt and run the following command:
-git clone https://github.com/<your-username>/<your-repository-name>.git
+`git clone https://github.com/<your-username>/<your-repository-name>.git`
 
 2. Navigate to the Project Directory
-cd <your-repository-name>
+`cd <your-repository-name>`
 
 3. Install Dependencies
 Install the required npm packages by running:
-npm install
+`npm install`
 
 4. Start the Development Server
 Run the following command to start the application locally:
-ng serve
+`ng serve`
 
 
 ## Development server
