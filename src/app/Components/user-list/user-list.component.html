@@ -1,0 +1,53 @@
+<div class="user-list-container">
+    <!-- Flexbox container for search box and Add User button -->
+    <div class="actions-container">
+      <button mat-raised-button color="primary" (click)="addUser()">Add User</button>
+      <mat-form-field appearance="outline" class="search-box">
+        <mat-label>Search</mat-label>
+        <input
+          matInput
+          [(ngModel)]="searchQuery"
+          (input)="filterUsers()"
+          placeholder="Search by name or email"
+        />
+      </mat-form-field>
+    </div>
+  
+    <table mat-table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let row; let i = index">
+              {{ i + 1 }}
+            </td>
+          </ng-container>
+          
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+        <td mat-cell *matCellDef="let user">{{ user.name }}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+        <td mat-cell *matCellDef="let user">{{ user.email }}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef>Role</th>
+        <td mat-cell *matCellDef="let user">{{ user.role }}</td>
+      </ng-container>
+  
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let user">
+          <button mat-button color="primary" (click)="editUser(user)">Edit</button>
+          <button mat-button color="warn" (click)="confirmDelete(user.id)">Delete</button>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+  

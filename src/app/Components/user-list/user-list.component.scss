@@ -1,0 +1,26 @@
+.user-list-container {
+    padding: 16px;
+  }
+  
+  table {
+    width: 100%;
+    min-width: 600px; // Ensure the table doesn't break on smaller screens
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+ 
+  
+  .actions-container {
+    display: flex;
+    justify-content: space-between; /* Positions elements at opposite ends */
+    align-items: center; /* Aligns items vertically in the center */
+    margin-bottom: 16px;
+  }
+  
+  .search-box {
+    width: 300px; /* Adjust width of the search box */
+  }
+  

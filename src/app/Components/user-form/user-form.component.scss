@@ -1,0 +1,52 @@
+.user-form-container {
+    padding: 16px;
+    max-width: 600px;
+    margin: 0 auto; // Center the form on larger screens
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .full-width {
+    width: 100%; /* Ensure all input boxes span the entire form width */
+    margin-bottom: 16px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  .form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  @media (max-width: 600px) {
+    .user-form-container {
+      padding: 8px;
+      max-width: 90%; // Use a smaller width on small screens
+    }
+  
+    .form-field {
+      margin-bottom: 12px;
+    }
+  
+    .button-group {
+      flex-direction: column; // Stack buttons vertically
+      gap: 12px;
+    }
+    .actions {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 12px;
+      }
+  }
+  
